@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobQuest: an Online Job Portal</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="icon" href="logo.png" type="image/x-icon"> <!-- favicon -->
 </head>
 <body>
     <header>
@@ -25,58 +25,90 @@
             <h2>Available Jobs</h2>
 
             <input type="text" id="search-bar" placeholder="Search for jobs...">
-
-            <div class="job">
-                <h3>Web Developer</h3>
-                <p>Company: XYZ Corp</p>
-                <p>Location: Remote</p>
-                <p>Description: Looking for an experienced web developer.</p>
-                <button><a href="#application-form">Apply now</a></button>
-            </div>
-            <div class="job">
-                <h3>Graphic Designer</h3>
-                <p>Company: Creative Studio</p>
-                <p>Location: New York</p>
-                <p>Description: Seeking a talented graphic designer.</p>
-                <button><a href="#application-form">Apply now</a></button>
-            </div>
-            <div class="job">
-                <h3>Data Analyst</h3>
-                <p>Company: Data Insights</p>
-                <p>Location: San Francisco</p>
-                <p>Description: Data analyst with strong analytical skills.</p>
-                <button><a href="#application-form">Apply now</a></button>
-            </div>
             
+            <div id="job-container">
+                <div class="job">
+                    <h3>Software Engineer</h3>
+                    <p>Company: JobQuest</p>
+                    <p>Location: Remote</p>
+                    <p>Description: JobQuest is recruting for the role for Software Engineer!</p>
+                    <!-- <button><a href="#application-form">Apply now</a></button> -->
+                    <button><a href="software-engineer.html" target="_blank">More Details</a></button>
+                </div>
+                <div class="job">
+                    <h3>Web Developer</h3>
+                    <p>Company: XYZ Corp</p>
+                    <p>Location: Remote</p>
+                    <p>Description: Looking for an experienced web developer.</p>
+                    <!-- <button><a href="#application-form">Apply now</a></button> -->
+                    <button><a href="web-developer.html" target="_blank">More Details</a></button>
+                </div>
+                <div class="job">
+                    <h3>Graphic Designer</h3>
+                    <p>Company: Creative Studios</p>
+                    <p>Location: New York</p>
+                    <p>Description: Seeking a talented graphic designer.</p>
+                    <!-- <button><a href="#application-form">Apply now</a></button> -->
+                    <button><a href="graphic-designer.html" target="_blank">More Details</a></button>
+                </div>
+                <div class="job">
+                    <h3>Data Analyst</h3>
+                    <p>Company: Data Insights</p>
+                    <p>Location: San Francisco</p>
+                    <p>Description: Data analyst with strong analytical skills.</p>
+                    <!-- <button><a href="#application-form">Apply now</a></button> -->
+                    <button><a href="data-analyst.html" target="_blank">More Details</a></button>
+                </div>
+            </div>
         </section>
 
         <!-- Job Application Form Section -->
         <section id="application-form">
             <h2>Apply for a Job</h2>
-
-            <form>
+        
+            <form id="job-application-form">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
-
+        
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
+        
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
-
+        
+                <label for="job">Job Role:</label>
+                <select id="job" name="job" required>
+                    <option value="">Select a job</option>
+                    <option value="Software Engineer">JobQuest - Software Engineer</option>
+                    <option value="Web Developer">XYZ Corp - Web Developer</option>
+                    <option value="Graphic Designer">Creative Studios - Graphic Designer</option>
+                    <option value="Data Analyst">Data Insights - Data Analyst</option>
+                </select>
+        
                 <label for="resume">Upload Resume:</label>
                 <input type="file" id="resume" name="resume" required>
-
+        
                 <button type="submit">Submit Application</button>
+
+                <!-- Success Modal -->
+                <div id="success-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="close-modal">&times;</span>
+                        <h2>Ahoy, Matey!</h2>
+                        <p>Ye have successfully charted a course for adventure! Your job application be safely stowed aboard the Jolly Roger, just like Captain Jack Sparrow’s treasures!</p>
+                    </div>
+                </div>
             </form>
         </section>
+        
+        
 
     </main>
 
     <footer>
         <p>&copy; 2024 JobQuest. All rights reserved</p>
-        <p>Follow us and see our improvement on:
-            <a href="https://github.com/KanishkVerma10">Github</a>,
+        <p>Follow and see our improvement on:
+            <a href="https://github.com/KanishkVerma10/JobQuest">Github</a>,
             <a href="https://www.linkedin.com/in/kanishk-verma-22542920a/">LinkedIn</a>
         </p>
             <a href="https://kanishkverma10.github.io/CV/my%20contact.html">Contact us</a>
